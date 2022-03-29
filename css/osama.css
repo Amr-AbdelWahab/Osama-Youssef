@@ -1,0 +1,96 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+    --main-back-color2:#23263a;
+    --main-color2:#ff4a57;
+    
+    --main-back-color:#202020;
+    --main-color:#feda4e;
+    --main-color2:#fe4e4e;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--main-back-color);
+  color: white;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start Header ------------------------------------------------ */
+/* header{
+    
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+header .container ::after{
+    content: "";
+    background-color: #a2a2a2;
+    height: 1px;
+    width: calc(100% - 30px);
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+}
+header img{
+    height: 40px;
+}
+header nav{
+    flex: 1;
+} */
+
+header{
+
+}
+header .container{
+    
+}
+
+
+
+
+
+/* End Header -------------------------------------------------*/
