@@ -13,6 +13,7 @@
     --main-back-color:#202020;
     --main-color:#feda4e;
     --main-color2:#fe4e4e;
+    --main-color3:#19c8fa;
 }
 html {
   scroll-behavior: smooth;
@@ -56,15 +57,17 @@ a{
 /* End Global Rules */
 
 /* Start Header ------------------------------------------------ */
-/* header{
-    
+
+header{
+
 }
 header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
     position: relative;
+    text-align: center;
+    min-height: 97px;
 }
 header .container ::after{
     content: "";
@@ -74,23 +77,111 @@ header .container ::after{
     position: absolute;
     left: 15px;
     bottom: 0;
+    z-index: -1;
 }
-header img{
+header .container img{
     height: 40px;
 }
+
+.toggle-menu{
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    /* border: 1px solid rgb(255, 0, 0); */
+}
+@media (min-width: 768px){
+    .toggle-menu{
+        display: none;
+    }
+}
+.toggle-menu span{
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.toggle-menu:hover span,
+.toggle-menu:hover .n2::after{
+    background-color: var(--main-color3);
+}
+.toggle-menu .n2::after{
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.toggle-icon .n1,
+.toggle-icon .n3{
+    width: 0%;
+}
+.toggle-icon .n2{
+    transform: rotate(225deg);
+}
+.toggle-icon .n2::after{
+    transform: rotate(-90deg);
+}
+
+
 header nav{
     flex: 1;
-} */
-
-header{
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-header .container{
-    
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+@media (max-width: 767px){
+    header nav ul{
+        display: none;
+    }
 }
 
-
-
-
+header nav li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+header nav ul li a{
+    display: block;
+    padding: 40px 10px;
+    font-size: 14px;
+    border-bottom: 2px solid #19c9fa00;
+    transition: 0.3s ease;
+}
+header li a:hover,
+header li .active{
+    color:var(--main-color3);
+    border-bottom: 2px solid var(--main-color3);
+}
+header .form{
+    margin-left: 40px;
+    width: 40px;
+    height: 30px;
+    border-left: 1px solid white;
+}
+header .form i{
+    font-size: 18px;
+    position: absolute;
+    right: 18px;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+header .form i:hover{
+    color: var(--main-color3);
+}
 
 /* End Header -------------------------------------------------*/

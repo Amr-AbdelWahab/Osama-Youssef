@@ -1,3 +1,17 @@
+// Ham
+let ham = document.getElementById("ham");
+
+ham.addEventListener("click", () => {
+
+  console.log(ham);
+  ham.classList.toggle("toggle-icon");
+
+
+
+});
+
+
+
 
 // go Up Button
 
@@ -21,7 +35,10 @@ up.onclick = function () {
 
 
 
-// Ham
+
+
+
+
 // let ham = document.getElementById("ham");
 // let dnNav = document.getElementById("dnNav");
 // let header = document.getElementById("header");
