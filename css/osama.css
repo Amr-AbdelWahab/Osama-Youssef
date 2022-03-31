@@ -79,8 +79,11 @@ header .container ::after{
     bottom: 0;
     z-index: -1;
 }
-header .container img{
+header .container img, .logo span{
     height: 40px;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 10px;
 }
 
 .toggle-menu{
@@ -149,7 +152,23 @@ header nav ul{
     }
 }
 
-header nav li{
+.nListOn{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 97px;
+    left: 0;
+    width: 100%;
+    background-color: #00000063;
+}
+.nListOn li {
+    /* height: 10px; */
+    width: calc(100% - 30px);
+}
+.nListOn li a{
+    padding: 10px;
+}
+    header nav li{
     margin-left: 10px;
     margin-right: 10px;
 }

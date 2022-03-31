@@ -6,11 +6,19 @@ ham.addEventListener("click", () => {
   console.log(ham);
   ham.classList.toggle("toggle-icon");
 
-
-
 });
 
 
+// toggol ham icon
+
+let nList = document.getElementById("nList");
+
+nList.addEventListener("click", () => {
+
+  console.log(nList);
+  nList.classList.toggle("nListOn");
+
+});
 
 
 // go Up Button
@@ -31,6 +39,7 @@ up.onclick = function () {
     behavior: "smooth",
   });
 };
+
 
 
 
