@@ -13,7 +13,7 @@ ham.addEventListener("click", () => {
 
 let nList = document.getElementById("nList");
 
-nList.addEventListener("click", () => {
+ham.addEventListener("click", () => {
 
   console.log(nList);
   nList.classList.toggle("nListOn");
