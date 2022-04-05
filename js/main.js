@@ -1,24 +1,26 @@
-// Ham
+// toggol ham icon
 let ham = document.getElementById("ham");
+let nList = document.getElementById("nList");
 
 ham.addEventListener("click", () => {
 
   console.log(ham);
   ham.classList.toggle("toggle-icon");
-
-});
-
-
-// toggol ham icon
-
-let nList = document.getElementById("nList");
-
-ham.addEventListener("click", () => {
-
   console.log(nList);
   nList.classList.toggle("nListOn");
 
 });
+
+
+let nLink = document.getElementsByClassName("nLink");
+
+  nLink.addEventListener("click", () => {
+  nList.classList.toggle("nListOn");
+  ham.classList.toggle("toggle-icon");
+});
+
+
+
 
 
 // go Up Button
