@@ -132,7 +132,7 @@ header .tLogo::before {
   cursor: pointer;
   /* border: 1px solid rgb(255, 0, 0); */
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .toggle-menu {
     display: none;
   }
@@ -184,7 +184,7 @@ header nav ul {
 
 /* Start mop-Header ------------------------------------------------ */
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   header nav ul {
     display: none;
   }
@@ -205,6 +205,8 @@ header nav ul {
 }
 .nListOn li a {
   padding: 10px;
+  font-size: large;
+  font-weight: 500;
 }
 .nListOn li a:hover{
   background-color: var(--main-color-treans);
@@ -236,6 +238,7 @@ header .form {
 }
 header .form i {
   font-size: 18px;
+  padding: auto;
   position: absolute;
   right: 18px;
   top: 50%;
@@ -429,7 +432,7 @@ header .form i:hover {
 
 .serv-cont{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   justify-content: center;
 }
 .serv-cont .serv-box{
