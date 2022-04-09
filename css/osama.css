@@ -10,6 +10,7 @@
   --main-back-color2: #23263a;
   --main-color2: #ff4a57;
 
+  --text-gry-color: #777;
   --main-back-color: #202020;
   --main-color: #feda4e;
   --main-color2: #fe4e4e;
@@ -77,23 +78,49 @@ header .container {
   text-align: center;
   min-height: 97px;
 }
-header .container ::after {
-  content: "";
-  background-color: #a2a2a2;
-  height: 1px;
-  width: calc(100% - 30px);
-  position: absolute;
-  left: 15px;
-  bottom: 0;
-  z-index: -1;
+.bottom-header-line{
+    background-color: #a2a2a2;
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 30px);
+    left: 15px;
+    bottom: 0;
+    z-index: -1;
 }
-header .container img,
-.logo span {
+
+
+
+header .tLogo {
+  text-align: center;
   height: 40px;
+  width: fit-content;
   font-size: 40px;
   font-weight: 800;
   letter-spacing: 10px;
+  position: relative;
 }
+header .tLogo::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  color: var(--main-color3);
+  overflow: hidden;
+  width: 0%;
+  transition: 0.7s ease;
+}
+.logo{
+    transition: 0.7s ease;
+}
+.logo:hover .tLogo::before{
+    width: 100%;
+  }
+
+
+
+
+
+
+
 
 .toggle-menu {
   width: 25px;
@@ -105,7 +132,7 @@ header .container img,
   cursor: pointer;
   /* border: 1px solid rgb(255, 0, 0); */
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .toggle-menu {
     display: none;
   }
@@ -157,7 +184,7 @@ header nav ul {
 
 /* Start mop-Header ------------------------------------------------ */
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   header nav ul {
     display: none;
   }
@@ -179,6 +206,9 @@ header nav ul {
 .nListOn li a {
   padding: 10px;
 }
+.nListOn li a:hover{
+  background-color: var(--main-color-treans);
+}
 header nav li {
   margin-left: 10px;
   margin-right: 10px;
@@ -196,6 +226,7 @@ header li a:hover,
 header li .active {
   color: var(--main-color3);
   border-bottom: 2px solid var(--main-color3);
+
 }
 header .form {
   margin-left: 40px;
@@ -343,21 +374,121 @@ header .form i:hover {
   }
 /* End Landing ------------------------------------------------ */
 
-/* Start Services -------------------------------- */
-.Services{
-    min-height: 100vh;
-}
+
+
+
+
 .title{
     padding-top: 100px;
+    margin-bottom: 30px;
     text-align: center;
-    
+    color: var(--main-color3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .title h2{
-
+    width: fit-content;
+    border-bottom: 2px solid var(--main-color3);
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.title h2::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--main-back-color);
+    border: 2px solid var(--main-color3);
+    bottom: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .title p{
+    color: var(--text-gry-color);
+}
+.title p{
+    /* animation: typing 2s steps(22), blink 0.5s step-end i; */
+}
+
+
+
+
+
+
+/* Start Services -------------------------------- */
+.Services{
+  min-height: 100vh;
+}
+/* Start Serv-cont ------------------------------------------------ */
+
+.serv-cont{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  justify-content: center;
+}
+.serv-cont .serv-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--text-gry-color);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    transition: 0.7s ease;
+}
+.serv-cont .serv-box:hover{
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.serv-cont .serv-box i{
+    font-size: xx-large;
+    padding: 0 0 20px;
+}
+.serv-cont .serv-box .text{
 
 }
+.serv-cont .serv-box .text h3{
+    padding: 10px;
+
+}
+.serv-cont .serv-box .text p{
+    color: var(--text-gry-color);
+    line-height: 1.5;
+}
+
+
+
+.serv-cont{
+
+
+}
+.serv-cont .serv-box{
+    
+}
+.serv-cont .serv-box i{
+
+}
+.serv-cont .serv-box .text{
+
+}
+.serv-cont .serv-box .text h3{
+
+}
+.serv-cont .serv-box .text p{
+
+}
+
+
+
+/* End Serv-cont ------------------------------------------------ */
+
 
 
 

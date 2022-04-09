@@ -12,11 +12,11 @@ ham.addEventListener("click", () => {
 });
 
 
-let nLink = document.getElementsByClassName("nLink");
+// let nLink = document.getElementsByClassName("nLink");
 
-  nLink.addEventListener("click", () => {
-  nList.classList.toggle("nListOn");
-  ham.classList.toggle("toggle-icon");
+  nList.addEventListener("click", () => {
+  nList.classList.remove("nListOn");
+  ham.classList.remove("toggle-icon");
 });
 
 
