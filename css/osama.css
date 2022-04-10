@@ -197,7 +197,7 @@ header nav ul {
   top: 97px;
   left: 0;
   width: 100%;
-  background-color: #0000006c;
+  background-color: rgba(33, 33, 33, 0.945);
 }
 .nListOn li {
   /* height: 10px; */
@@ -432,8 +432,13 @@ header .form i:hover {
 
 .serv-cont{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   justify-content: center;
+}
+@media (max-width:500px){
+  .serv-cont{
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
 }
 .serv-cont .serv-box{
     display: flex;
