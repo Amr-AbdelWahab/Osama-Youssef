@@ -351,14 +351,15 @@ header .form i:hover {
     .profilePic {
       width: 100%;
       margin-top: -80px;
-      /* top: 280px; */
     }
     .profilePic .img {
+      width: 100%;
       padding: 0;
       margin: 0;
+
     }
     .profilePic img {
-      width: 100%;
+      width: 80%;
     }
   
     .floatDesc {
@@ -454,18 +455,20 @@ header .form i:hover {
 @media (max-width: 767px) {
   .iam .cont{
     flex-direction: column;
-
   }
   .iam .cont img{
     height: 120px;
     width: 200px;
     object-fit: cover;
     object-position: 0 0;
+    padding-left: 10px;
   }
   .iam .cont p{
     border: none;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+
   }
   
 }
