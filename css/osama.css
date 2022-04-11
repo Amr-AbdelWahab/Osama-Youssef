@@ -182,6 +182,14 @@ header nav ul {
   margin-right: 30px;
 }
 
+
+
+
+
+
+
+
+
 /* Start mop-Header ------------------------------------------------ */
 
 @media (max-width: 767px) {
@@ -197,7 +205,7 @@ header nav ul {
   top: 97px;
   left: 0;
   width: 100%;
-  background-color: rgba(33, 33, 33, 0.945);
+  background-color: rgba(58, 71, 82, 0.945);
 }
 .nListOn li {
   /* height: 10px; */
@@ -212,7 +220,6 @@ header nav ul {
   background-color: var(--main-color-treans);
 }
 header nav li {
-  margin-left: 10px;
   margin-right: 10px;
 }
 /* End mop-Header ------------------------------------------------ */
@@ -249,6 +256,10 @@ header .form i {
 header .form i:hover {
   color: var(--main-color3);
 }
+
+
+
+
 
 /* End Header -------------------------------------------------*/
 
@@ -418,6 +429,64 @@ header .form i:hover {
 .title p{
     /* animation: typing 2s steps(22), blink 0.5s step-end i; */
 }
+
+
+/* Start About Me ------------------------------------------------ */
+
+.iam .cont{
+  display: flex;
+  align-items: center;
+}
+.iam .cont img{
+  display: block;
+  max-width: 50%;
+  border-bottom: 2px solid var(--main-color3);
+}
+.iam .cont p{
+  color: var(--text-gry-color);
+  border-left: 2px solid var(--main-color3);
+  padding-left: 5px;
+  max-width: 50%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .iam .cont{
+    flex-direction: column;
+
+  }
+  .iam .cont img{
+    height: 120px;
+    width: 200px;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+  .iam .cont p{
+    border: none;
+    text-align: center;
+    width: 100%;
+  }
+  
+}
+
+
+
+
+
+
+
+
+/* End About Me ------------------------------------------------ */
+
+
+
+
+
+
+
+
+
 
 
 
