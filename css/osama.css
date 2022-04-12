@@ -9,6 +9,7 @@
 :root {
   --main-back-color2: #23263a;
   --main-color2: #ff4a57;
+  --trnsation: 0.7s ease;
 
   --text-gry-color: #777;
   --main-back-color: #202020;
@@ -391,8 +392,8 @@ header .form i:hover {
 
 
 
-
-
+/* Start Title componant ------------------------------------------------ */
+/* ----------------------------------- */
 .title{
     padding-top: 100px;
     margin-bottom: 30px;
@@ -406,6 +407,8 @@ header .form i:hover {
 }
 .title h2{
     width: fit-content;
+    letter-spacing: 5px;
+    text-transform: uppercase;
     border-bottom: 2px solid var(--main-color3);
     padding-bottom: 10px;
     margin-top: 15px;
@@ -428,8 +431,14 @@ header .form i:hover {
     color: var(--text-gry-color);
 }
 .title p{
-    /* animation: typing 2s steps(22), blink 0.5s step-end i; */
 }
+/* End Title componant ------------------------------------------------ */
+/* ----------------------------------- */
+
+
+
+
+
 
 
 /* Start About Me ------------------------------------------------ */
@@ -473,16 +482,117 @@ header .form i:hover {
   
 }
 
-
-
-
-
-
-
-
 /* End About Me ------------------------------------------------ */
 
 
+
+
+
+
+
+/* ---------------------Start Skills ----------------- */
+.Skills .container .title p{
+  max-width: 500px;
+}
+.Skills .cont {
+  /* flex-basis: 50%; */
+}
+.Skills .cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Skills .cont .skill-cont{
+  border-right: 2px solid var(--main-color3);
+  flex-basis: 50%;
+  border-radius: 0 20px 20px 0;
+  padding-right: 50px;
+}
+.Skills .cont img{
+  display: block;
+  max-width: 50%;
+  border: 2px solid var(--main-color3);
+  border-radius: 50%;
+}
+
+
+.prog-holder{
+  padding: 20px;
+  /* margin-bottom: 30px; */
+  cursor: pointer;
+}
+.prog-holder h4{
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 1.2rem;
+
+}
+.prog-holder .prog{
+  width: 100%;
+  height: 10px;
+  background-color: var(--text-gry-color);
+  border-radius:5px;
+}
+.prog-holder .prog span{
+  display: block;
+  height: 100%;
+  background-color:  var(--main-color3);
+  border-radius: 5px;
+  position: relative;
+  transition: var(--trnsation);
+}
+.prog-holder:hover .prog span{
+  background-color:  var(--main-color2);
+}
+  .prog-holder .prog span::before{
+    content: attr(data-propress);
+    color: white;
+    opacity: .8;
+    width: fit-content;
+    text-align: center;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: var(--main-color2) ;
+    position: absolute;
+    right: -22px;
+    bottom: 23px;
+}
+.prog-holder .prog span::after{
+  content: "";
+  position: absolute;
+  right: -3px;
+  bottom: 3px;
+  border: 10px solid ;
+  border-color:   var(--main-color2) transparent transparent ;
+  opacity: .8;
+}
+
+@media (max-width: 767px) {
+  .Skills .cont{
+    flex-direction: column-reverse;
+  }
+  .Skills .cont .skill-cont{
+    border-right:none;
+    border-top: 2px solid var(--main-color3);
+    border-bottom: 2px solid var(--main-color3);
+    border-radius:  20px;
+    padding: 20px 0 30px ;
+    width: 100%;
+  }
+  
+  
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------End Skills -------------------- */
 
 
 
