@@ -11,7 +11,7 @@
   --main-color2: #ff4a57;
   --trnsation: 0.7s ease;
 
-  --text-gry-color: #777;
+  --text-gry-color: #777777;
   --main-back-color: #202020;
   --main-color: #feda4e;
   --main-color2: #fe4e4e;
@@ -194,6 +194,9 @@ header nav ul {
 /* Start mop-Header ------------------------------------------------ */
 
 @media (max-width: 767px) {
+  .tLogo{
+    font-size: 35px !important;
+  }
   header nav ul {
     display: none;
   }
