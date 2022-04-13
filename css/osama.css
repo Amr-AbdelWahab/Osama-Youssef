@@ -549,7 +549,7 @@ header .form i:hover {
   background-color:  var(--main-color2);
 }
   .prog-holder .prog span::before{
-    content: attr(data-propress);
+    content: attr(data-width);
     color: white;
     opacity: .8;
     width: fit-content;
