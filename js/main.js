@@ -20,19 +20,21 @@ ham.addEventListener("click", () => {
 });
 
 // animate skill section
+// console.log("her");
 
 let skillSec = document.querySelector(".Skills");
 let progress = document.querySelectorAll(".prog span");
 
 window.onscroll = function () {
-  if 
-  (window.scrollY >= skillSec.offsetTop -500 ) {
-    console.log("her");
+  if (window.scrollY >= skillSec.offsetTop ){  
     progress.forEach((span) => {
       span.style.width = span.dataset.width;
     });
+  
   }
-}
+
+
+};
 
 
 // go Up Button
