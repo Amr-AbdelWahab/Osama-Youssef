@@ -2,7 +2,7 @@
 let ham = document.getElementById("ham");
 let nList = document.getElementById("nList");
 
-ham.addEventListener("click", () => {
+ham.addEventListener("click", () =>  {
 
   console.log(ham);
   ham.classList.toggle("toggle-icon");
@@ -26,7 +26,7 @@ let skillSec = document.querySelector(".Skills");
 let progress = document.querySelectorAll(".prog span");
 
 window.onscroll = function () {
-  if (window.scrollY >= skillSec.offsetTop ){  
+  if (window.scrollY >= skillSec.offsetTop -50){  
     progress.forEach((span) => {
       span.style.width = span.dataset.width;
     });
@@ -35,6 +35,37 @@ window.onscroll = function () {
 
 
 };
+
+
+// toggle-skills
+
+let btnSkMore = document.getElementById("btn-sk-more");
+let btnSkLess = document.getElementById("btn-sk-less");
+let btnSkill = document.getElementById("btn-skill");
+let toggleSkills = document.getElementsByClassName("toggleskills");
+
+btnSkMore.addEventListener("click", () =>  {
+  console.log(toggleSkills);
+  btnSkMore.classList.toggle("off");
+  btnSkLess.classList.toggle("off");
+
+  toggleSkills.classList.toggle("off");
+
+});
+
+
+
+btnSkLess.addEventListener("click", () =>  {
+  btnSkMore.classList.toggle("off");
+  btnSkLess.classList.toggle("off");
+
+});
+
+
+
+
+
+
 
 
 // go Up Button

@@ -40,6 +40,10 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+.bd{
+  border: 1px solid #000;
+}
+
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -448,9 +452,13 @@ header .form i:hover {
 
 .iam .cont{
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  /* border: 1px solid #000; */
+
 }
-.iam .cont img{
+.iam .cont  .img1{
   display: block;
   max-width: 50%;
   border-bottom: 2px solid var(--main-color3);
@@ -462,13 +470,25 @@ header .form i:hover {
   max-width: 50%;
   font-size: 1.2rem;
   line-height: 1.5;
+  position: relative;
+}
+.iam .cont .seg{
+  width: 100px;
+  float: right;
+  position: absolute;
+  right: 50px;
+  bottom: -35px;
+  display: block;
+  transform: rotate(-5deg);
 }
 
 @media (max-width: 767px) {
   .iam .cont{
     flex-direction: column;
+    /* border: 1px solid #000; */
+    
   }
-  .iam .cont img{
+  .iam .cont .img1{
     height: 120px;
     width: 200px;
     object-fit: cover;
@@ -480,6 +500,15 @@ header .form i:hover {
     text-align: center;
     max-width: 100%;
     font-size: 1rem;
+    padding: 0;
+    position: relative;
+  }
+  .iam .cont .seg{
+    position: absolute;
+    right: calc( 45vw - 100px );
+    transform: translateX(-50%);
+    /* border: 1px solid #000; */
+    transform: rotate(-5deg);
 
   }
   
@@ -505,7 +534,32 @@ header .form i:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  /* border: 1px solid #000; */
 }
+
+
+
+button{
+  all: unset;
+  border: 2px solid var(--main-color3);
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--trnsation);
+  cursor: pointer;
+}
+button:hover{
+  background-color: var(--main-color3);
+  border: 2px solid white);
+}
+
+.off{
+  display: none;
+}
+
+
 .Skills .cont .skill-cont{
   border-right: 2px solid var(--main-color3);
   flex-basis: 50%;
@@ -570,6 +624,9 @@ header .form i:hover {
   border-color:   var(--main-color2) transparent transparent ;
   opacity: .8;
 }
+
+
+
 
 @media (max-width: 767px) {
   .Skills .cont{
