@@ -351,7 +351,7 @@ header .form i:hover {
     transition: var(--trnsation);
   }
   .floatDesc .descContainer p i:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     color: var(--main-color2);
     /* transform: rotate(1deg); */
   }
@@ -749,6 +749,7 @@ button:hover{
     padding: 20px;
     border-radius: 20px;
     margin: 10px;
+    overflow: hidden;
     transition: 0.7s ease;
 }
 .serv-cont .serv-box:hover{
@@ -756,20 +757,36 @@ button:hover{
 }
 .serv-cont .serv-box i{
     font-size: xx-large;
-    padding: 0 0 20px;
+    margin: 0 0 20px;
+    padding:  10px;
+    /* background-color: var(--main-color2); */
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 0px var(--main-color2);
+    transition: var(--trnsation);
+}
+.serv-cont .serv-box:hover i{
+  box-shadow: 0px 0px 0px 400px var(--main-color3);
 }
 .serv-cont .serv-box .text{
 
 }
 .serv-cont .serv-box .text h3{
     padding: 10px;
-
+    transition: var(--trnsation);
 }
 .serv-cont .serv-box .text p{
     color: var(--text-gry-color);
     line-height: 1.5;
+    transition: var(--trnsation);
+    font-weight: 500;
 }
-
+.serv-cont .serv-box:hover   .text h3{
+  text-decoration: underline;
+  color: black;
+}
+.serv-cont .serv-box:hover   .text p{
+  color: black;
+}
 
 
 .serv-cont{
