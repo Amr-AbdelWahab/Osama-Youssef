@@ -243,7 +243,6 @@ header li a:hover,
 header li .active {
   color: var(--main-color3);
   border-bottom: 2px solid var(--main-color3);
-
 }
 header .form {
   margin-left: 40px;
@@ -286,7 +285,7 @@ header .form i:hover {
   top: 0;
   left: 0;
   background-color: hsla(0, 0%, 0%, 0.5);
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 .profilePic {
@@ -300,8 +299,9 @@ header .form i:hover {
   justify-content: center;
 }
 .profilePic .img {
-  padding: 50px;
+  /* padding: 50px; */
   max-height: 30%;
+  /* max-width: 50%; */
   display: flex;
   justify-content: center;
 }
@@ -466,7 +466,7 @@ header .form i:hover {
 .iam .cont p{
   color: var(--text-gry-color);
   border-left: 2px solid var(--main-color3);
-  padding-left: 5px;
+  padding-left: 10px;
   max-width: 50%;
   font-size: 1.2rem;
   line-height: 1.5;
@@ -538,12 +538,53 @@ header .form i:hover {
 }
 
 
+.skillsCont{
+  /* border: 1px solid #000; */
+  max-height: 493.9px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  transition: var(--trnsation);
+  /* scrollbar-width: thin; */
+}
+.skillsCont:hover{
+  background-color: #24263d9a;
+}
+
+
+/* scrollbar */
+/* width */
+.skillsCont::-webkit-scrollbar {
+  width: 3px;
+}
+/* Track */
+.skillsCont::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;  */
+  /* border-radius: 10px; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#ff4a566e; 
+  transition: var(--trnsation);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: var(--main-color2);  */
+}
+
+
+
+
 
 button{
   all: unset;
+  height: 25px;
+  width: 85px;
   border: 2px solid var(--main-color3);
   padding: 5px 10px;
   border-radius: 5px;
+  text-align: center;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -558,6 +599,8 @@ button:hover{
 .off{
   display: none;
 }
+
+
 
 
 .Skills .cont .skill-cont{

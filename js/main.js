@@ -37,29 +37,36 @@ window.onscroll = function () {
 };
 
 
-// toggle-skills
+// toggle-skills    overflow-y: scroll;
 
 let btnSkMore = document.getElementById("btn-sk-more");
 let btnSkLess = document.getElementById("btn-sk-less");
-let btnSkill = document.getElementById("btn-skill");
-let toggleSkills = document.getElementsByClassName("toggleskills");
 
-btnSkMore.addEventListener("click", () =>  {
-  console.log(toggleSkills);
-  btnSkMore.classList.toggle("off");
-  btnSkLess.classList.toggle("off");
+let lessGroup = document.getElementById("lessGroup");
+let moreGroup = document.getElementById("moreGroup");
 
-  toggleSkills.classList.toggle("off");
+let skillsCont = document.getElementById("skillsCont");
 
-});
+                    // moreBtn   // toggle OFF to BTN
+                    btnSkMore.addEventListener("click", () =>  {
+                          btnSkMore.classList.toggle("off");
+                          btnSkLess.classList.toggle("off");
+
+                          // lessGroup.classList.toggle("off");
+                          moreGroup.classList.toggle("off");
 
 
+                          
+                    });
 
-btnSkLess.addEventListener("click", () =>  {
-  btnSkMore.classList.toggle("off");
-  btnSkLess.classList.toggle("off");
+                    // lessBtn // toggle OFF to BTN
+                    btnSkLess.addEventListener("click", () =>  {
+                      btnSkMore.classList.toggle("off");
+                      btnSkLess.classList.toggle("off");
 
-});
+                      // lessGroup.classList.toggle("off");
+                      moreGroup.classList.toggle("off");
+                    });
 
 
 
