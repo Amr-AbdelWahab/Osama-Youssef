@@ -323,22 +323,37 @@ header .form i:hover {
 .floatDesc .descContainer {
   max-width: 600px;
 }
-
-
 .floatDesc .descContainer h2 {
   line-height: 1.5;
   font-size: 32px;
   font-weight: normal;
   margin-bottom: 20px;
 }
-.floatDesc .descContainer p {
-  line-height: 2;
-  font-size: 14px;
+.floatDesc .descContainer h2 span {
+  color: rgba(255, 255, 255, 0.685);
+  font-size: 22px;
+
 }
 .floatDesc .descContainer a {
     color: var(--main-color3);
     font-weight: 800;
     letter-spacing: 2px;
+  }
+
+.floatDesc .descContainer p {
+  line-height: 2;
+  font-size: 14px;
+}
+  .floatDesc .descContainer p i {
+    font-size: 2em;
+    padding: 0 10px;
+
+    transition: var(--trnsation);
+  }
+  .floatDesc .descContainer p i:hover {
+    transform: scale(1.1);
+    color: var(--main-color2);
+    /* transform: rotate(1deg); */
   }
   
 
@@ -572,7 +587,6 @@ header .form i:hover {
 ::-webkit-scrollbar-thumb:hover {
   /* background: var(--main-color2);  */
 }
-
 
 
 
