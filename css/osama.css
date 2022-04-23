@@ -730,7 +730,7 @@ button:hover{
 
 /* Start Services -------------------------------- */
 .Services{
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 /* Start Serv-cont ------------------------------------------------ */
 
@@ -935,7 +935,7 @@ outline: none;
   background-color: #202020d0;
   height: 100%;
   width: 100%;
-  border-top: 2px solid var(--main-color3);
+  border-top: 1px solid var(--main-color3);
 
 }
 .Footer .container {
@@ -982,28 +982,31 @@ text-align: center;
     font-size: small;
   }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* End Footer -------------------------------- */
+/* Start goUp -------------------------------- */
+.goUp{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  border-bottom: 1px solid var(--main-color3);
+  padding: 10px 5px ;
+  border-radius: 10px;
+  z-index: 100;
+  transition: var(--trnsation);
+  transform: scale(0);
+}
+.goUp i{
+  font-size: xx-large;
+  color: var(--main-color3);
+  transition: var(--trnsation);
+}
+.goUp i:hover {
+  color: var(--main-color2);
+}
+.UpShow{
+  transform: scale(1);
+}
+
+
+
+/* End goUp -------------------------------- */

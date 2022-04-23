@@ -64,12 +64,20 @@ let skillsCont = document.getElementById("skillsCont");
                       btnSkMore.classList.toggle("off");
                       btnSkLess.classList.toggle("off");
 
+
                       // lessGroup.classList.toggle("off");
                       moreGroup.classList.toggle("off");
                     });
 
 
-
+// go Up Button
+let goUp = document.querySelector(".goUp");
+window.onscroll = function () {
+  console.log(this.scrollY);
+  this.scrollY >= 919
+  ? goUp.classList.add("UpShow")
+  : goUp.classList.remove("UpShow");
+};
 
 
 
