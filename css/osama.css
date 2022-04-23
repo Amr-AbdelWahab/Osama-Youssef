@@ -856,10 +856,11 @@ outline: none;
 .Contact .container form textarea.main-input{
   height: 200px;
 }
-.Contact .container form input[type="submit"]{
+.Contact .container form .mailMe {
   background-color: var(--main-color3);
   color: white;
   padding: 15px 20px;
+  width: fit-content;
   display: flex;
   margin-left: auto;
   border: none;
