@@ -314,7 +314,7 @@ header .form i:hover {
   background-color: var(--main-color-treans);
   position: absolute;
   width: 50%;
-  top: 40%;
+  top: 50%;
   transform: translatey(-50%);
   padding: 50px;
   display: flex;
@@ -394,6 +394,8 @@ header .form i:hover {
       padding: 10px;
       margin: 0;
       text-align: center;
+      top: 40%;
+
     }
   
     .floatDesc .descContainer {
@@ -815,11 +817,193 @@ button:hover{
 
 
 /* End Serv-cont ------------------------------------------------ */
-
-
-
-
-
-
-
 /* End Services -------------------------------- */
+
+
+
+
+
+/* Start Contact -------------------------------- */
+
+.Contact .container{
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .Contact .container{
+    flex-direction: column-reverse;
+  }
+}
+
+.Contact .container form{
+  flex-basis: 70%;
+}
+.Contact .container form .main-input{
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  transition: var(--trnsation);
+}
+.Contact .container form .main-input:hover {
+  background-color: rgb(193, 240, 255);
+}
+.Contact .container form .main-input:focus{
+outline: none;
+}
+.Contact .container form textarea.main-input{
+  height: 200px;
+}
+.Contact .container form input[type="submit"]{
+  background-color: var(--main-color3);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  margin-left: auto;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.Contact .container form{
+}
+.Contact .container .info{
+  width: 25%;
+}
+
+@media (max-width: 767px) {
+  .Contact .container .info{
+  text-align: center;
+  width: 100%;
+  }
+}
+
+.Contact .container .info h4{
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.Contact .container .info .phone{
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+}
+.Contact .container .info h4:nth-of-type(2){
+  margin-top: 90px;
+}
+@media (max-width: 767px) {
+  .Contact .container .info h4:nth-of-type(2){
+    margin-top: 30px;
+  }
+}
+
+.Contact .container .info address{
+    color: #777;
+    line-height: 2;
+}
+@media (max-width: 767px) {
+  .Contact .container .info address{
+    margin-bottom: 30px;
+  }
+}
+/* End Contact -------------------------------- */
+
+
+
+/* Start Footer -------------------------------- */
+
+.Footer  {
+  background: url(../image/code-background-2.png);
+  background: url(../image/code-background-1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  margin-top: 50px;
+  padding: 50px 0 10px;
+  /* border-top: 2px solid var(--main-color3); */
+
+}
+.Footer::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #202020d0;
+  height: 100%;
+  width: 100%;
+  border-top: 2px solid var(--main-color3);
+
+}
+.Footer .container {
+position: relative;
+z-index: 20;
+text-align: center;
+}
+.Footer img{
+  height: 50px;
+  margin-bottom: 10px;
+}
+.Footer p:not(.copyright) {
+  margin: auto;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  width: fit-content;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.Footer .social {
+  margin: 30px;
+}
+.Footer .social i{
+  padding: 10px;
+  font-size: 22px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: var(--trnsation);
+}
+.Footer .social i:hover{
+  border-bottom: 2px solid var(--main-color2);
+  background-color: var(--main-color3);
+  color: #202020;
+  border-radius: 10px 10px 0 0;
+}
+.Footer .copyright span {
+  color: var(--main-color3);
+}
+.Footer .copyright a {
+  color: var(--main-color2);
+}
+@media (max-width: 767px) {
+  .Footer .copyright  {
+    font-size: small;
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End Footer -------------------------------- */
