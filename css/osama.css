@@ -1006,6 +1006,11 @@ text-align: center;
 .UpShow{
   transform: scale(1);
 }
+@media (max-width: 767px) {
+  .goUp{right: 10px;}
+  .UpShow{transform: scale(0.8);}
+}
+
 
 
 
