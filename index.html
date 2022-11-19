@@ -39,16 +39,14 @@
                     <li><a class="nLink" href="#iam">About</a></li>
                     <li><a class="nLink" href="#Contact">Contact</a></li>
                 </ul>
-                <div class="form">
-                    <i class="fas fa-search"></i>
-                </div>
+                <!-- <div class="form"><i class="fas fa-search"></i></div> -->
             </nav>
         </div>
     </header>
     <!-- End Header -->
 
     <!-- Start landing -->
-    <section class="landing">
+    <section class="landing" id="sect">
         <div class="overlay">
             <div class="profilePic">
                 <div class="img">
@@ -296,7 +294,6 @@
 <!-- End Services -->
 
 
-
 <!-- Start Contact us -->
 <section class="Contact">
     <!-- head Contact us -->
@@ -306,17 +303,26 @@
     </div>
     <div class="container">
 
-        <form action="">
-            <input class="main-input" type="text" name="name" placeholder="Your Name">
-            <input class="main-input" type="email" name="mail" placeholder="Your Email">
-            <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
-            <a class="mailMe" href="mailto:Osama9mohamed5@gmail.com">Send Message</a>
-            <!-- <input type="submit" href="mailto" value="Send Message"> -->
+        <form onsubmit="sendEmail(); reset(); return false;" method="get">
+
+            <input class="main-input" type="text" name="name" placeholder="Your Name" id="senderName" required >
+            
+            <input class="main-input" type="email" name="mail" placeholder="Your Email" id="senderMail" required >
+
+            <input class="main-input" type="text" name="subject" placeholder="Subject" id="subject" required >
+            
+            <textarea class="main-input" name="message" placeholder="Your Message" id="messageBody" required></textarea>
+
+            <input type="submit" class="mailMe" id="submit"  value="Send Message">
+
         </form>
+
+        
         <div class="info">
             <h4>Get In Touch</h4>
             <span class="phone">011 24 88 6666</span>
             <span class="phone">0111 22 11 515</span>
+            <span class="email">osama9mohamed5@gmail.com</span>
             <h4>Where I'm</h4>
             <address>
                 El-Mohandessin St, <br>
@@ -324,9 +330,22 @@
                 EGYPT
             </address>
         </div>
+
     </div>
+
 </section>
 <!-- End Contact us -->
+
+
+
+<!-- <div class="popUpContainer "> -->
+  <div class="popUpOverlay " id="popUpOverlay">
+    <span class="popUpClose" id="popUpClose">X</span>
+    <p class="popUpMsmSent" id="popUpMsmSent"></p>
+    <p class="popUpMsmSent" id="">Your Message has been successfully sent to OSAMA's mail.</p>
+  </div>
+  
+<!-- </div> -->
 
 
 
@@ -366,20 +385,44 @@
 </section>
 <!-- End Footer -->
 
-
-
-
-
-
-
-
-
-
-<a href="#" class="goUp ">
-    <i class="fa-solid fa-hand-point-up "></i>
-</a>
+<a href="#" class="goUp "><i class="fa-solid fa-hand-point-up "></i></a>
 
     <script src="js/main.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+      function sendEmail(){
+        let senderName = document.getElementById('senderName'),
+              senderMail = document.getElementById('senderMail'),
+              subject = document.getElementById('subject'),
+              messageBody = document.getElementById('messageBody');
+
+        popUpMsmSent.innerHTML = `Thanks ${senderName.value} !`;
+
+        Email.send({
+          SecureToken : "559136a3-e31f-4ecf-acbc-641fd869e0b3",
+          // To : 'deacwad@amrabdelwahab.com',
+          To : 'osama9mohamed5@gmail.com , deacwad@amrabdelwahab.com',
+          From : senderMail.value,
+          Subject : subject.value,
+          Body : "Name: " + senderName.value + "<br>" +
+                    "E-mail: " + senderMail.value + "<br>" +
+                    "Subject: " + subject.value + "<br>" +
+                    "Message: " + messageBody.value 
+                  }).then(
+                    message => document.getElementById('popUpOverlay').classList.add('open')
+            );
+      }
+
+      document.getElementById('popUpClose').addEventListener('click',  ()=> {
+        document.getElementById('popUpOverlay').classList.remove('open');});
+
+
+    </script>
+
+
 </body>
 
 </html>

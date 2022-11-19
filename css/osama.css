@@ -60,6 +60,7 @@ a {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+
   }
 }
 /* End Global Rules */
@@ -68,7 +69,7 @@ a {
 
 header {
   position: fixed;
-  background-color: rgb(33, 33, 33, 0.7);
+  background-color: rgba(33, 33, 33, 0.966);
   top: 0;
   left: 0;
   width: 100%;
@@ -184,7 +185,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 
 
@@ -858,7 +859,7 @@ outline: none;
 }
 .Contact .container form .mailMe {
   background-color: var(--main-color3);
-  color: white;
+  color: #fff;
   padding: 15px 20px;
   width: fit-content;
   display: flex;
@@ -867,6 +868,11 @@ outline: none;
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: var(--trnsation);
+}
+.Contact .container form .mailMe:hover {
+transform: scale(1.05);
+color: var(--main-back-color);
 }
 .Contact .container form{
 }
@@ -887,7 +893,7 @@ outline: none;
   font-weight: bold;
   letter-spacing: 2px;
 }
-.Contact .container .info .phone{
+.Contact .container .info span{
     display: block;
     margin-bottom: 10px;
     color: #777;
@@ -911,6 +917,65 @@ outline: none;
   }
 }
 /* End Contact -------------------------------- */
+
+
+
+
+.popUpOverlay{
+  position: fixed;
+  transform: translate( -50%, -50%);
+  top: 150%;
+  left: 50%;
+  z-index: 2;
+  opacity: 0;
+  background-color: #202020e7;
+  border: 2px solid var(--main-color3);
+  border-radius: 15px;
+  transition: var(--trnsation);
+}
+.popUpOverlay.open{
+  top: 50%;
+  opacity: 1;
+}
+#popUpMsmSent{
+  color: var(--main-color3);
+}
+
+
+
+.popUpClose
+{
+  color: #fff;
+  background-color: var(--main-color2);
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--trnsation);
+}
+.popUpClose:hover {
+  transform: rotate(180deg);
+}
+.popUpMsmSent {
+  color: var(--main-color2);
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+
 
 
 

@@ -12,12 +12,25 @@ ham.addEventListener("click", () =>  {
 });
 
 
+
+
 // let nLink = document.getElementsByClassName("nLink");
 
   nList.addEventListener("click", () => {
   nList.classList.remove("nListOn");
   ham.classList.remove("toggle-icon");
 });
+
+
+
+
+
+
+
+
+
+
+
 
 // animate skill section
 // console.log("her");
@@ -70,10 +83,16 @@ let skillsCont = document.getElementById("skillsCont");
                     });
 
 
+
+
+
+
+
+
 // go Up Button
 let goUp = document.querySelector(".goUp");
 window.onscroll = function () {
-  console.log(this.scrollY);
+  // console.log(this.scrollY);
   this.scrollY >= 919
   ? goUp.classList.add("UpShow")
   : goUp.classList.remove("UpShow");
@@ -81,26 +100,6 @@ window.onscroll = function () {
 
 
 
-
-
-// go Up Button
-
-// let up = document.querySelector(".goUp");
-
-// window.onscroll = function () {
-//   console.log(this.scrollY);
-
-//   this.scrollY >= 800
-//     ? up.classList.add("goUpShow")
-//     : up.classList.remove("goUpShow");
-// };
-
-// up.onclick = function () {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth",
-//   });
-// };
 
 
 
