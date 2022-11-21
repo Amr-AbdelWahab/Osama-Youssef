@@ -410,7 +410,7 @@
         popUpMsmSent.innerHTML = `Thanks ${senderName.value} !`;
 
         Email.send({
-          SecureToken : "559136a3-e31f-4ecf-acbc-641fd869e0b3",
+          SecureToken : "b6340dd2-6b07-4c5b-b86f-9451e31bab57",
           // To : 'deacwad@amrabdelwahab.com',
           To : 'osama9mohamed5@gmail.com , deacwad@amrabdelwahab.com',
           From : senderMail.value,
@@ -420,7 +420,8 @@
                     "Subject: " + subject.value + "<br>" +
                     "Message: " + messageBody.value 
                   }).then(
-                    message => document.getElementById('popUpOverlay').classList.add('open')
+                    message => alert(message)
+                    // message => document.getElementById('popUpOverlay').classList.add('open')
             );
       }
 
