@@ -410,11 +410,12 @@
         popUpMsmSent.innerHTML = `Thanks ${senderName.value} !`;
 
         Email.send({
-          SecureToken : "b6340dd2-6b07-4c5b-b86f-9451e31bab57",
+          SecureToken : "210c57af-8b7e-4f76-bab9-fc8c0eef91a7",
           // To : 'deacwad@amrabdelwahab.com',
-          To : 'osama9mohamed5@gmail.com , deacwad@amrabdelwahab.com',
-          From :  'deacwad@amrabdelwahab.com',
+          To : 'osama9mohamed5@gmail.com',
+          From :  senderMail.value,
           Subject : subject.value,
+
           Body : "Name: " + senderName.value + "<br>" +
                     "E-mail: " + senderMail.value + "<br>" +
                     "Subject: " + subject.value + "<br>" +

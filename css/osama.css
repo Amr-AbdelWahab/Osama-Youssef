@@ -1037,12 +1037,16 @@ text-align: center;
   color: #202020;
   border-radius: 10px 10px 0 0;
 }
+.Footer .copyright  {
+  margin-bottom: 10px;
+}
 .Footer .copyright span {
   color: var(--main-color3);
 }
 .Footer .copyright a {
   color: var(--main-color2);
 }
+
 @media (max-width: 767px) {
   .Footer .copyright  {
     font-size: small;
