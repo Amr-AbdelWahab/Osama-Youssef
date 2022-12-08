@@ -274,7 +274,8 @@ header .form i:hover {
 /* Start Landing ------------------------------------------------ */
 .landing {
   background-color: #202020;
-  background-image: url(../image/landing-back-2.jpg);
+  /* background-image: url(../image/landing-back-2.jpg); */
+  background-image: url(../image/landing-back-3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
